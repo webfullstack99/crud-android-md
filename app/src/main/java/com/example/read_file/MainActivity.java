@@ -181,7 +181,9 @@ public class MainActivity extends AppCompatActivity {
                             queryDocumentSnapshot.getString("name"),
                             queryDocumentSnapshot.getString("major")
                     );
-                    studentArrayList.add(std);
+                    for (int i =0; i< 5; i++){
+                        studentArrayList.add(std);
+                    }
                 }
                 adapter.notifyDataSetChanged();
             }

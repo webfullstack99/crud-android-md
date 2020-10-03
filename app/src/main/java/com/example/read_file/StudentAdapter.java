@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
@@ -61,6 +63,10 @@ public class StudentAdapter extends BaseAdapter {
         holder.txtId.setText(std.getId());
         holder.txtName.setText(std.getName());
         holder.txtMajor.setText(std.getMajor());
+
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.listview_item_animate);
+        convertView.startAnimation(animation);
+
         return convertView;
     }
 }
